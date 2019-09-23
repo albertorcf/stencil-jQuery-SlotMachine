@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0">
+  <title>Stencil Component Starter</title>
+
+  <script type="module" src="/build/stencil-slot-machine.esm.js"></script>
+  <script nomodule src="/build/stencil-slot-machine.js"></script>
+
+  <style>
+    .container {
+      width: 100px;
+      height: 100px;
+      display: inline-block;
+      border: 2px solid #444;
+      border-radius: 6px;
+      padding: 1px;
+      margin: 0 3px;
+    }
+    .buttons {
+      margin: 3px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <slot-machine id="machine1" width="100px" height="100px" images-dir="/assets/img/"
+      images="['slot1.png', 'slot2.png', 'slot3.png']" />
+  </div>
+  <div class="container">
+    <slot-machine id="machine2" active=1 width="100px" height="100px" images-dir="/assets/img/"
+      images='["slot1.png", "slot2.png", "slot3.png"]' />
+  </div>
+  <div class="container">
+    <slot-machine id="machine3" active=2 width="100px" height="100px"
+      images='["/assets/img/slot1.png","/assets/img/slot2.png","/assets/img/slot3.png"]' />
+  </div>
+
+  <div class="buttons">
+    <button onClick="shuffle()">Shuffle</button>
+  </div>
+
+  <div class="buttons">
+    <button onClick="machine1.next()">Next</button>
+    <button onClick="machine1.prev()">Prev</button>
+  </div>
+
+  <script>
+    var machine1 = document.querySelector('#machine1');
+    var machine2 = document.querySelector('#machine2');
+    var machine3 = document.querySelector('#machine3');
+
+    function shuffle() {
+      machine1.shuffle();
+
+      setTimeout(() => {
+        machine2.shuffle();
+      }, 500);
+
+      setTimeout(() => {
+        machine3.shuffle();
+      }, 1000);
+    }
+  </script>
+  </body>
+</html>
