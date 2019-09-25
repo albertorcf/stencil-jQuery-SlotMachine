@@ -4,7 +4,7 @@ A web component compiled with StencilJS to simulate a slot machine effect
 
 ![slot-machine](./img/demo.gif)
 
-A [StencilJS](https://stenciljs.com/) project to generate a web component encapsulating the remarkable [jQuery-SlotMachine](https://github.com/josex2r/jQuery-SlotMachine) javascript component. 
+A [StencilJS](https://stenciljs.com/) project to generate a web component encapsulating the cool [jQuery-SlotMachine](https://github.com/josex2r/jQuery-SlotMachine) javascript library. 
 
 ## Cloning the repository
 
