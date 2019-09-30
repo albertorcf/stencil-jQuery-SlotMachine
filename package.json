@@ -1,7 +1,7 @@
 {
-  "name": "stencil-slot-machine",
-  "version": "0.0.1",
-  "description": "Stencil Component Starter",
+  "name": "stencil-jquery-slotmachine",
+  "version": "0.0.2",
+  "description": "A web component compiled with StencilJS to simulate a slot machine",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "es2015": "dist/esm/index.mjs",
@@ -30,6 +30,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/albertorcf/stencil-slot-machine.git"
+    "url": "https://github.com/albertorcf/stencil-jQuery-SlotMachine.git"
   }
 }
